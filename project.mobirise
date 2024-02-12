@@ -87,7 +87,7 @@
       "enabled": true
     },
     "favicon": false,
-    "mbrsiteDomain": "ygn4uqmv67",
+    "mbrsiteDomain": "yl5mlkafgp",
     "robotsSwitcher": false,
     "sitemapSwitcher": false,
     "sitemapSwitcherAuto": false,
@@ -95,7 +95,7 @@
     "cookiesAlert": false,
     "gdpr": false,
     "uniqCompNum": 34,
-    "versionPublish": "5.6.5",
+    "versionPublish": "5.9.4",
     "screenshot": "screenshot.png",
     "publishChangesOnly": true
   },
@@ -110,314 +110,6 @@
         "html_before": ""
       },
       "components": [
-        {
-          "alias": false,
-          "_styles": {
-            "background-color": "@bgColor",
-            "& when not (@fullScreen)": {
-              "padding-top": "(@paddingTop * 1rem)",
-              "padding-bottom": "(@paddingBottom * 1rem)",
-              ".carousel": {
-                "@media (min-width: 768px)": {
-                  "height": "(@sliderHeight * 100px)"
-                },
-                "@media (max-width: 767px)": {
-                  "height": "100vh"
-                },
-                "img": {
-                  "width": "100%",
-                  "height": "100%",
-                  "object-fit": "cover"
-                }
-              },
-              ".carousel-item, .carousel-inner": {
-                "height": "100%"
-              }
-            },
-            "& when (@fullScreen)": {
-              "padding-top": "0",
-              "padding-bottom": "0",
-              ".carousel": {
-                "width": "100%"
-              },
-              ".carousel-inner": {
-                "display": "flex",
-                "align-content": "center",
-                "align-items": "center"
-              },
-              ".carousel-item img": {
-                "height": "100vh",
-                "object-fit": "cover"
-              }
-            },
-            ".carousel-caption": {
-              "top": "50%",
-              "transform": "translateY(-50%)",
-              "display": "flex",
-              "flex-direction": "column",
-              "align-items": "center",
-              "justify-content": "center",
-              "@media (max-width: 767px)": {
-                "right": "5%",
-                "left": "5%"
-              }
-            },
-            ".mbr-section-title": {
-              "letter-spacing": "12px",
-              "margin-bottom": "25px",
-              "&.display-1": {
-                "@media (min-width: 1400px)": {
-                  "font-size": "110px",
-                  "line-height": "186px"
-                }
-              }
-            },
-            ".mbr-section-btn": {
-              "margin-top": "42px"
-            },
-            ".mobi-mbri-arrow-next": {
-              "margin-left": "5px"
-            },
-            ".mobi-mbri-arrow-prev": {
-              "margin-right": "5px"
-            },
-            ".carousel-control:hover": {
-              "&.carousel-control-prev .mobi-mbri": {
-                "transform": "translateX(3px)"
-              },
-              "&.carousel-control-next .mobi-mbri": {
-                "transform": "translateX(-3px)"
-              }
-            },
-            ".item-wrapper": {
-              "width": "100%"
-            },
-            "@media (max-width: 767px)": {
-              ".container .carousel-control": {
-                "margin-bottom": "0"
-              },
-              ".content-slider-wrap": {
-                "width": "100% !important"
-              }
-            },
-            ".container .carousel-indicators": {
-              "margin-bottom": "3px"
-            },
-            ".carousel-control": {
-              "top": "50%",
-              "width": "92px",
-              "height": "92px",
-              "margin-top": "-1.5rem",
-              "font-size": "21px",
-              "border-radius": "50%",
-              "color": "#202020",
-              "background-color": "transparent",
-              "border": "1px solid @controlsColor",
-              "transition": "all 0.2s ease-out",
-              "opacity": "1",
-              "&.carousel-control-prev": {
-                "left": "0",
-                "margin-left": "2.5rem",
-                "color": "@controlsColor !important"
-              },
-              "&.carousel-control-next": {
-                "right": "0",
-                "margin-right": "2.5rem",
-                "color": "@controlsColor !important"
-              },
-              ".mobi-mbri": {
-                "transition": "all 0.2s ease-out"
-              },
-              "@media (max-width: 768px)": {
-                "display": "none !important"
-              }
-            },
-            ".carousel-indicators": {
-              "position": "absolute",
-              "bottom": "0",
-              "margin-bottom": "2rem !important",
-              "align-items": "center",
-              "li": {
-                "max-width": "10px",
-                "max-height": "10px",
-                "height": "6px",
-                "width": "6px",
-                "margin": "15px",
-                "background-color": "@controlsColor",
-                "border": "none",
-                "border-radius": "50%",
-                "opacity": "1",
-                "transition": "all 0.2s ease-in-out",
-                "&.active, &:hover": {
-                  "transform": "scale(1.6)"
-                },
-                "&::after, &::before": {
-                  "content": "none"
-                }
-              },
-              "&.ie-fix": {
-                "left": "50%",
-                "display": "block",
-                "width": "60%",
-                "margin-left": "-30%",
-                "text-align": "center"
-              },
-              "@media (max-width: 768px)": {
-                "display": "none !important"
-              }
-            },
-            ".mbr-section-text,.mbr-section-btn": {
-              "text-align": "center"
-            }
-          },
-          "_name": "slider3",
-          "_sourceTheme": "bistrom5",
-          "_customHTML": "<section data-bs-version=\"5.1\" class=\"slider3\" group=\"Sliders & Galleries\" mbr-class=\"{'mbr-fullscreen': fullScreen}\">\n    <mbr-parameters>\n        <input type=\"id\" name=\"sliderId\">\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\" checked>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"0\" condition=\"!fullScreen\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"0\" condition=\"!fullScreen\">\n        <input type=\"range\" title=\"Height\" name=\"sliderHeight\" min=\"3\" max=\"8\" value=\"4\" step=\".5\" condition=\"!fullScreen\">\n        <header>Carousel</header>\n        <input type=\"checkbox\" title=\"Fade Effect\" name=\"fade\">\n        <input type=\"checkbox\" title=\"Autoplay\" name=\"autoplay\">\n        <input type=\"range\" title=\"Interval\" name=\"interval\" min=\"3\" max=\"10\" value=\"5\" step=\"1\" condition=\"autoplay\">\n        <input type=\"checkbox\" title=\"Controls\" name=\"showControl\">\n        <input type=\"checkbox\" title=\"Bullets\" name=\"showIndicators\">\n        <input type=\"color\" title=\"Color\" value=\"#fef2f2\" name=\"controlsColor\" condition=\"showControl || showIndicators\">\n        <header>Slide</header>\n        <input type=\"checkbox\" title=\"Caption\" name=\"showCaption\">\n        <input type=\"checkbox\" title=\"Text\" name=\"showText\">\n        <input type=\"checkbox\" title=\"Buttons\" name=\"showButtons\">\n        <header>Background</header>\n        <input type=\"color\" title=\"Color\" name=\"bgColor\" value=\"#ffffff\" selected>\n    </mbr-parameters>\n    \n  \n        <div class=\"row justify-content-center\">\n            <div class=\"col-12 col-md-12 col-lg-12\">\n                <div id=\"{{sliderId}}\" class=\"carousel slide\" mbr-class=\"{'carousel-fade': fade}\" data-ride=\"{{autoplay ? 'carousel' : false}}\" data-bs-ride=\"{{autoplay ? 'carousel' : false}}\" data-interval=\"{{interval*1000}}\" data-bs-interval=\"{{interval*1000}}\">\n                    <ol class=\"carousel-indicators\" mbr-if=\"showIndicators\">\n                        <li data-target=\"#{{sliderId}}\" data-bs-target=\"#{{sliderId}}\" data-slide-to=\"0\" data-bs-slide-to=\"0\" class=\"active\"></li>\n                        \n                        \n                    </ol>\n                    <div class=\"carousel-inner\">\n                        <div class=\"carousel-item slider-image item active\">\n                            <div class=\"item-wrapper\">\n                                <img class=\"d-block w-100\" src=\"@PROJECT_PATH@/assets/images/banner-momas-1920x1000.jpg\" data-slide-to=\"0\" data-bs-slide-to=\"0\">\n                                <div class=\"carousel-caption\" mbr-if=\"showCaption || showText || showButtons\">\n                                    <h5 class=\"mbr-section-title mbr-fonts-style\" mbr-if=\"showCaption\" mbr-theme-style=\"display-1\">START YOUR MORNING WITH COFFEE</h5>\n                                    <p class=\"mbr-section-text mb-0 mbr-fonts-style\" mbr-if=\"showText\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-section-text,.mbr-section-btn\">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste maiores, blanditiis eum.</p>\n                                    <div class=\"mbr-section-btn\" mbr-if=\"showButtons\" mbr-buttons mbr-theme-style=\"display-4\" data-toolbar=\"-mbrBtnMove\"><a class=\"btn btn-lg btn-white\" href=\"#\" data-app-placeholder=\"Type Text\">READ MORE</a> <a class=\"btn btn-lg btn-white-outline\" href=\"#\" data-app-placeholder=\"Type Text\">VIEW MORE</a></div>\n                                </div>\n                            </div>\n                        </div>\n\n                        \n                    </div>\n                    <a class=\"carousel-control carousel-control-prev\" mbr-if=\"showControl\" href=\"#{{sliderId}}\" role=\"button\" data-slide=\"prev\" data-bs-slide=\"prev\">\n                        <span class=\"mobi-mbri mobi-mbri-arrow-prev\" aria-hidden=\"true\"></span>\n                        <span class=\"sr-only visually-hidden\">Previous</span>\n                    </a>\n                    <a class=\"carousel-control carousel-control-next\" mbr-if=\"showControl\" href=\"#{{sliderId}}\" role=\"button\" data-slide=\"next\" data-bs-slide=\"next\">\n                        <span class=\"mobi-mbri mobi-mbri-arrow-next\" aria-hidden=\"true\"></span>\n                        <span class=\"sr-only visually-hidden\">Next</span>\n                    </a>\n                </div>\n            </div>\n        </div>\n \n</section>",
-          "_cid": "t0ce0KCrjz",
-          "_anchor": "slider3-4",
-          "_protectedParams": [],
-          "_global": false,
-          "_once": false,
-          "_params": {}
-        },
-        {
-          "alias": false,
-          "_styles": {
-            "padding-top": "(@paddingTop * 1rem)",
-            "padding-bottom": "(@paddingBottom * 1rem)",
-            "& when (@bg-type = \"color\")": {
-              "background-color": "@bg-value"
-            },
-            "& when (@bg-type = \"image\")": {
-              "background-image": "url(@bg-value)"
-            },
-            ".main_header": {
-              "margin": "25px 0 44px"
-            },
-            ".mbr-section-title": {
-              "color": "#e5673b",
-              "margin-bottom": "13px"
-            },
-            ".mbr-text": {
-              "color": "#ffffff",
-              "line-height": "1.2727em"
-            },
-            ".card_wrapper": {
-              "margin-bottom": "30px",
-              "@media (min-width: 992px)": {
-                "padding": "0 15px"
-              }
-            },
-            ".card_top": {
-              "display": "flex",
-              "align-items": "baseline",
-              "color": "#ffffff"
-            },
-            ".line": {
-              "border-bottom": "1px solid @lineColor",
-              "flex-grow": "1",
-              "margin": "0 15px"
-            },
-            ".card_title": {
-              "color": "#e5673b",
-              "line-height": "1.2727em"
-            },
-            ".card_price": {
-              "color": "#ffffff"
-            },
-            ".card_text": {
-              "color": "#ffffff"
-            }
-          },
-          "_name": "article4",
-          "_sourceTheme": "bistrom5",
-          "_customHTML": "<section data-bs-version=\"5.1\" class=\"Article4\" group=\"Article\" mbr-class=\"{'mbr-parallax-background':bg.parallax}\">\n    \n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"4\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"1\">\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Text\" name=\"showText\" checked>\n        <header>Card</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"cardTitle\" checked>\n        <input type=\"checkbox\" title=\"Price\" name=\"cardPrice\" checked>\n        <input type=\"checkbox\" title=\"Text\" name=\"cardText\" checked>\n        <input type=\"range\" inline title=\"Count\" name=\"listCount\" min=\"2\" max=\"30\" step=\"1\" value=\"9\">\n        <input type=\"color\" title=\"Line\" value=\"#e5673b\" name=\"lineColor\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"@PROJECT_PATH@/assets/images/mbr-1-1920x1279.jpg\" selected parallax>\n            <input type=\"color\" title=\"Color\" value=\"#a7a27e\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#1d2e68\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.6\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    \n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"row\">\n            <div class=\"col-12 col lg-10\" mbr-if=\"showTitle || showText\">\n                <div class=\"main_header text-center\">\n                    <h3 class=\"mbr-section-title mbr-fonts-style\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\" mbr-theme-style=\"display-2\"><b>M E N Ú</b></h3>\n                    <p class=\"mbr-text mb-0 mbr-fonts-style\" mbr-if=\"showText\" data-app-selector=\".mbr-text\" mbr-theme-style=\"display-7\"><b>¡CEVICHE LISTO PARA LLEVAR!</b><br>* Todos los Ceviches vienen únicamente en presentación de 16 oz. (1 libra), acompañado de Salsa de Chiltepe de la Casa y Galletas Saladas o Plataninas.<br></p>\n                </div>\n            </div>\n        </div>\n        <div class=\"row\" mbr-list-grow=\"listCount\" mbr-list mbr-if=\"cardTitle || cardPrice || cardText\">\n            <div class=\"col-12 col-md-12 col-lg-6\">\n                <div class=\"card_wrapper\">\n                    <div class=\"card_top\">\n                        <h4 class=\"card_title mb-0 mbr-fonts-style\" mbr-if=\"cardTitle\" data-app-selector=\".card_title\" mbr-theme-style=\"display-5\"><b>CEVICHE</b><br><b>de Camarón&nbsp;</b><b>Tradicional</b></h4>\n                        <div class=\"line\"></div>\n                        <p class=\"card_price mb-0 mbr-fonts-style\" mbr-if=\"cardPrice\" data-app-selector=\".card_price\" mbr-theme-style=\"display-5\"><b>Q115</b></p>\n                    </div>\n                    <p class=\"card_text mb-0 mbr-fonts-style\" mbr-if=\"cardText\" data-app-selector=\".card_text\" mbr-theme-style=\"display-7\">Camarón mediano precocido y curtido con sal y limón con tomate, cebolla morada y culantro finamente picados.</p>\n                </div>\n            </div>\n            <div class=\"col-12 col-md-12 col-lg-6\">\n                <div class=\"card_wrapper\">\n                    <div class=\"card_top\">\n                        <h4 class=\"card_title mb-0 mbr-fonts-style\" mbr-if=\"cardTitle\" data-app-selector=\".card_title\" mbr-theme-style=\"display-5\"><b>COCTEL</b><div><b>de Camarón</b></div></h4>\n                        <div class=\"line\"></div>\n                        <p class=\"card_price mb-0 mbr-fonts-style\" mbr-if=\"cardPrice\" data-app-selector=\".card_price\" mbr-theme-style=\"display-5\"><b>Q125</b></p>\n                    </div>\n                    <p class=\"card_text mb-0 mbr-fonts-style\" mbr-if=\"cardText\" data-app-selector=\".card_text\" mbr-theme-style=\"display-7\">Camarón mediano precocido y curtido con sal y limón, en una salsa condimentada de la casa.</p>\n                </div>\n            </div>\n        <div class=\"col-12 col-md-12 col-lg-6\">\n                <div class=\"card_wrapper\">\n                    <div class=\"card_top\">\n                        <h4 class=\"card_title mb-0 mbr-fonts-style\" mbr-if=\"cardTitle\" data-app-selector=\".card_title\" mbr-theme-style=\"display-5\"><b>CEVICHE</b><div><b>de Pescado Tipo Peruano</b></div></h4>\n                        <div class=\"line\"></div>\n                        <p class=\"card_price mb-0 mbr-fonts-style\" mbr-if=\"cardPrice\" data-app-selector=\".card_price\" mbr-theme-style=\"display-5\"><b>Q115</b></p>\n                    </div>\n                    <p class=\"card_text mb-0 mbr-fonts-style\" mbr-if=\"cardText\" data-app-selector=\".card_text\" mbr-theme-style=\"display-7\">Pescado de primera, cortado en trozos, curtido con sal y limón con finas julianas de cebolla morada y sazonado con Ingredientes Especiales.</p>\n                </div>\n            </div><div class=\"col-12 col-md-12 col-lg-6\">\n                <div class=\"card_wrapper\">\n                    <div class=\"card_top\">\n                        <h4 class=\"card_title mb-0 mbr-fonts-style\" mbr-if=\"cardTitle\" data-app-selector=\".card_title\" mbr-theme-style=\"display-5\"><b>CEVICHE</b><div><b>de Pescado Tradicional</b></div></h4>\n                        <div class=\"line\"></div>\n                        <p class=\"card_price mb-0 mbr-fonts-style\" mbr-if=\"cardPrice\" data-app-selector=\".card_price\" mbr-theme-style=\"display-5\"><b>Q115</b></p>\n                    </div>\n                    <p class=\"card_text mb-0 mbr-fonts-style\" mbr-if=\"cardText\" data-app-selector=\".card_text\" mbr-theme-style=\"display-7\">Pescado de primera, cortado en trozos, curtido con sal y limón con tomate, cebolla morada y culantro finamente picados.</p>\n                </div>\n            </div><div class=\"col-12 col-md-12 col-lg-6\">\n                <div class=\"card_wrapper\">\n                    <div class=\"card_top\">\n                        <h4 class=\"card_title mb-0 mbr-fonts-style\" mbr-if=\"cardTitle\" data-app-selector=\".card_title\" mbr-theme-style=\"display-5\"><b>CEVICHE</b><div><b style=\"font-size: calc(1.035rem + 0.065 * ((100vw - 20rem) / 28));\">Mixto de Camarón y Pescado</b></div></h4>\n                        <div class=\"line\"></div>\n                        <p class=\"card_price mb-0 mbr-fonts-style\" mbr-if=\"cardPrice\" data-app-selector=\".card_price\" mbr-theme-style=\"display-5\"><b>Q115</b><br></p>\n                    </div>\n                    <p class=\"card_text mb-0 mbr-fonts-style\" mbr-if=\"cardText\" data-app-selector=\".card_text\" mbr-theme-style=\"display-7\">Una mezcla de nuestros Ceviches de Camarón Tradicional y Pescado Tradicional.</p>\n                </div>\n            </div><div class=\"col-12 col-md-12 col-lg-6\">\n                <div class=\"card_wrapper\">\n                    <div class=\"card_top\">\n                        <h4 class=\"card_title mb-0 mbr-fonts-style\" mbr-if=\"cardTitle\" data-app-selector=\".card_title\" mbr-theme-style=\"display-5\"><b>CEVICHE</b><br><b>de Concha</b></h4>\n                        <div class=\"line\"></div>\n                        <p class=\"card_price mb-0 mbr-fonts-style\" mbr-if=\"cardPrice\" data-app-selector=\".card_price\" mbr-theme-style=\"display-5\"><b>Q125</b></p>\n                    </div>\n                    <p class=\"card_text mb-0 mbr-fonts-style\" mbr-if=\"cardText\" data-app-selector=\".card_text\" mbr-theme-style=\"display-7\">Concha Negra curtida con sal y limón, con tomate, cebolla morada y hierbabuena finamente picados.</p>\n                </div>\n            </div><div class=\"col-12 col-md-12 col-lg-6\">\n                <div class=\"card_wrapper\">\n                    <div class=\"card_top\">\n                        <h4 class=\"card_title mb-0 mbr-fonts-style\" mbr-if=\"cardTitle\" data-app-selector=\".card_title\" mbr-theme-style=\"display-5\"><b>CEVICHE</b><br><b>Mixto de Concha y Camarón</b></h4>\n                        <div class=\"line\"></div>\n                        <p class=\"card_price mb-0 mbr-fonts-style\" mbr-if=\"cardPrice\" data-app-selector=\".card_price\" mbr-theme-style=\"display-5\"><b>Q125</b></p>\n                    </div>\n                    <p class=\"card_text mb-0 mbr-fonts-style\" mbr-if=\"cardText\" data-app-selector=\".card_text\" mbr-theme-style=\"display-7\">Una mezcla de nuestro Ceviche de Concha y Camarón Tradicional.</p>\n                </div>\n            </div><div class=\"col-12 col-md-12 col-lg-6\">\n                <div class=\"card_wrapper\">\n                    <div class=\"card_top\">\n                        <h4 class=\"card_title mb-0 mbr-fonts-style\" mbr-if=\"cardTitle\" data-app-selector=\".card_title\" mbr-theme-style=\"display-5\"><b>CEVICHE</b><br><b>Mixto de Camarón y Pulpo</b></h4>\n                        <div class=\"line\"></div>\n                        <p class=\"card_price mb-0 mbr-fonts-style\" mbr-if=\"cardPrice\" data-app-selector=\".card_price\" mbr-theme-style=\"display-5\"><b>Q125</b></p>\n                    </div>\n                    <p class=\"card_text mb-0 mbr-fonts-style\" mbr-if=\"cardText\" data-app-selector=\".card_text\" mbr-theme-style=\"display-7\">Una mezcla de nuestro Ceviche de Camarón Tradicional con Trozos de Pulpo en su punto, sazonado con Ingredientes Especiales.<br></p>\n                </div>\n            </div><div class=\"col-12 col-md-12 col-lg-6\">\n                <div class=\"card_wrapper\">\n                    <div class=\"card_top\">\n                        <h4 class=\"card_title mb-0 mbr-fonts-style\" mbr-if=\"cardTitle\" data-app-selector=\".card_title\" mbr-theme-style=\"display-5\"><b>CEVICHE</b><br><b>Mixto de Pescado y Pulpo</b></h4>\n                        <div class=\"line\"></div>\n                        <p class=\"card_price mb-0 mbr-fonts-style\" mbr-if=\"cardPrice\" data-app-selector=\".card_price\" mbr-theme-style=\"display-5\"><b>Q125</b></p>\n                    </div>\n                    <p class=\"card_text mb-0 mbr-fonts-style\" mbr-if=\"cardText\" data-app-selector=\".card_text\" mbr-theme-style=\"display-7\">Una mezcla de nuestro Ceviche de Pescado Tradicional con Trozos de Pulpo en su punto, sazonado con Ingredientes Especiales.</p>\n                </div>\n            </div></div>\n    </div>\n</section>",
-          "_cid": "t0cbC56m7s",
-          "_anchor": "article4-0",
-          "_protectedParams": [],
-          "_global": false,
-          "_once": false,
-          "_params": {}
-        },
-        {
-          "alias": false,
-          "_styles": {
-            "padding-top": "(@paddingTop * 1rem)",
-            "padding-bottom": "(@paddingBottom * 1rem)",
-            "position": "relative",
-            "background-color": "@contentColor",
-            "@media (min-width: 768px)": {
-              ".g-0": {
-                "margin-right": "0 !important",
-                "margin-left": "0 !important",
-                "& > [class*=\"col\"]": {
-                  "padding-left": "0 !important",
-                  "padding-right": "0 !important"
-                }
-              }
-            },
-            ".card_wrapper": {
-              "padding": "2rem 20%",
-              "text-align": "center",
-              "display": "flex",
-              "align-items": "center",
-              "justify-content": "center",
-              "height": "100%",
-              "position": "relative",
-              "@media (max-width: 991px)": {
-                "padding": "65px 30px",
-                ".shape": {
-                  "width": "auto",
-                  "padding": "0 1rem"
-                }
-              }
-            },
-            ".content_box": {
-              "position": "relative",
-              "z-index": "2"
-            },
-            ".shape": {
-              "position": "absolute",
-              "z-index": "1",
-              "top": "50%",
-              "left": "50%",
-              "width": "100%",
-              "transform": "translate(-50%, -50%)",
-              "opacity": "(@imgOpacity * 1)",
-              "padding": "0 100px",
-              "img": {
-                "width": "100%",
-                "height": "100%",
-                "object-fit": "contain"
-              }
-            },
-            ".mbr-section-title": {
-              "color": "#e04600",
-              "margin-bottom": "20px"
-            },
-            ".mbr-section-btn": {
-              "margin-top": "43px"
-            },
-            ".image-wrapper, img": {
-              "width": "100%",
-              "height": "100%",
-              "object-fit": "cover"
-            },
-            ".mbr-text, .mbr-section-btn": {
-              "text-align": "left",
-              "color": "#1d2e68"
-            }
-          },
-          "_name": "features12",
-          "_sourceTheme": "bistrom5",
-          "_customHTML": "<section data-bs-version=\"5.1\" class=\"features12\" group=\"Features\" mbr-class=\"{'mbr-parallax-background':bg.parallax}\">\n    \n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Reverse\" name=\"reverse\" checked>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"0\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"0\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Text\" name=\"showText\" checked>\n        <input type=\"checkbox\" title=\"Buttons\" name=\"showButtons\">\n        <input type=\"checkbox\" title=\"Shape\" name=\"showShape\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"imgOpacity\" min=\".1\" max=\"1\" step=\".1\" value=\"0.5\" condition=\"showShape\">\n        <header>Background</header>\n        <input type=\"color\" title=\"Background\" value=\"#e5ddd5\" name=\"contentColor\">\n        <!-- End block parameters -->\n    </mbr-parameters>\n    \n\n        <div class=\"row g-0\" mbr-class=\"{'flex-row-reverse' : reverse}\">\n            <div class=\"col-12 col-md-12 col-lg-6\">\n                <div class=\"image-wrapper\">\n                    <img src=\"@PROJECT_PATH@/assets/images/coctel-de-camaron-momas-1-1080x1080.jpg\" alt=\"Mobirise\">\n                </div>\n            </div>\n            <div class=\"col-12 col-md-12 col-lg-6\">\n                <div class=\"card_wrapper\">\n                    <div class=\"content_box\">\n                        <h4 class=\"mbr-section-title mbr-fonts-style\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\" mbr-theme-style=\"display-2\"><b>E X T R A S</b></h4>\n                        <p class=\"mbr-text mb-0 mbr-fonts-style\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\" mbr-theme-style=\"display-5\"><br>AGUACATE HASS (Entero)<br><b>Q.10.00</b><br><br>GALLETAS (Incluye 2 paquetitos)<br><b>Q.5.00</b><br><br>PLATANINAS (Incluye 1 bolsita)<br><b>Q.5.00</b></p>\n                        <div mbr-buttons mbr-theme-style=\"display-4\" data-toolbar=\"-mbrBtnMove\" class=\"mbr-section-btn\" mbr-if=\"showButtons\"><a class=\"btn btn-lg btn-white\" href=\"#\" data-app-placeholder=\"Type Text\">VIEW MORE</a></div>\n                    </div>\n                    <div class=\"shape\" mbr-if=\"showShape\">\n                        <img src=\"../_images/signature_pink.png\" alt>\n                    </div>\n                </div>\n            </div>\n        </div>\n        \n</section>",
-          "_cid": "t1CGCGcMLA",
-          "_anchor": "features12-p",
-          "_protectedParams": [],
-          "_global": false,
-          "_once": false,
-          "_params": {}
-        },
         {
           "alias": false,
           "_styles": {
@@ -977,6 +669,314 @@
           "_protectedParams": [],
           "_global": true,
           "_once": "menu",
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "background-color": "@bgColor",
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 1rem)",
+              "padding-bottom": "(@paddingBottom * 1rem)",
+              ".carousel": {
+                "@media (min-width: 768px)": {
+                  "height": "(@sliderHeight * 100px)"
+                },
+                "@media (max-width: 767px)": {
+                  "height": "100vh"
+                },
+                "img": {
+                  "width": "100%",
+                  "height": "100%",
+                  "object-fit": "cover"
+                }
+              },
+              ".carousel-item, .carousel-inner": {
+                "height": "100%"
+              }
+            },
+            "& when (@fullScreen)": {
+              "padding-top": "0",
+              "padding-bottom": "0",
+              ".carousel": {
+                "width": "100%"
+              },
+              ".carousel-inner": {
+                "display": "flex",
+                "align-content": "center",
+                "align-items": "center"
+              },
+              ".carousel-item img": {
+                "height": "100vh",
+                "object-fit": "cover"
+              }
+            },
+            ".carousel-caption": {
+              "top": "50%",
+              "transform": "translateY(-50%)",
+              "display": "flex",
+              "flex-direction": "column",
+              "align-items": "center",
+              "justify-content": "center",
+              "@media (max-width: 767px)": {
+                "right": "5%",
+                "left": "5%"
+              }
+            },
+            ".mbr-section-title": {
+              "letter-spacing": "12px",
+              "margin-bottom": "25px",
+              "&.display-1": {
+                "@media (min-width: 1400px)": {
+                  "font-size": "110px",
+                  "line-height": "186px"
+                }
+              }
+            },
+            ".mbr-section-btn": {
+              "margin-top": "42px"
+            },
+            ".mobi-mbri-arrow-next": {
+              "margin-left": "5px"
+            },
+            ".mobi-mbri-arrow-prev": {
+              "margin-right": "5px"
+            },
+            ".carousel-control:hover": {
+              "&.carousel-control-prev .mobi-mbri": {
+                "transform": "translateX(3px)"
+              },
+              "&.carousel-control-next .mobi-mbri": {
+                "transform": "translateX(-3px)"
+              }
+            },
+            ".item-wrapper": {
+              "width": "100%"
+            },
+            "@media (max-width: 767px)": {
+              ".container .carousel-control": {
+                "margin-bottom": "0"
+              },
+              ".content-slider-wrap": {
+                "width": "100% !important"
+              }
+            },
+            ".container .carousel-indicators": {
+              "margin-bottom": "3px"
+            },
+            ".carousel-control": {
+              "top": "50%",
+              "width": "92px",
+              "height": "92px",
+              "margin-top": "-1.5rem",
+              "font-size": "21px",
+              "border-radius": "50%",
+              "color": "#202020",
+              "background-color": "transparent",
+              "border": "1px solid @controlsColor",
+              "transition": "all 0.2s ease-out",
+              "opacity": "1",
+              "&.carousel-control-prev": {
+                "left": "0",
+                "margin-left": "2.5rem",
+                "color": "@controlsColor !important"
+              },
+              "&.carousel-control-next": {
+                "right": "0",
+                "margin-right": "2.5rem",
+                "color": "@controlsColor !important"
+              },
+              ".mobi-mbri": {
+                "transition": "all 0.2s ease-out"
+              },
+              "@media (max-width: 768px)": {
+                "display": "none !important"
+              }
+            },
+            ".carousel-indicators": {
+              "position": "absolute",
+              "bottom": "0",
+              "margin-bottom": "2rem !important",
+              "align-items": "center",
+              "li": {
+                "max-width": "10px",
+                "max-height": "10px",
+                "height": "6px",
+                "width": "6px",
+                "margin": "15px",
+                "background-color": "@controlsColor",
+                "border": "none",
+                "border-radius": "50%",
+                "opacity": "1",
+                "transition": "all 0.2s ease-in-out",
+                "&.active, &:hover": {
+                  "transform": "scale(1.6)"
+                },
+                "&::after, &::before": {
+                  "content": "none"
+                }
+              },
+              "&.ie-fix": {
+                "left": "50%",
+                "display": "block",
+                "width": "60%",
+                "margin-left": "-30%",
+                "text-align": "center"
+              },
+              "@media (max-width: 768px)": {
+                "display": "none !important"
+              }
+            },
+            ".mbr-section-text,.mbr-section-btn": {
+              "text-align": "center"
+            }
+          },
+          "_name": "slider3",
+          "_sourceTheme": "bistrom5",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"slider3\" group=\"Sliders & Galleries\" mbr-class=\"{'mbr-fullscreen': fullScreen}\">\n    <mbr-parameters>\n        <input type=\"id\" name=\"sliderId\">\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\" checked>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"0\" condition=\"!fullScreen\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"0\" condition=\"!fullScreen\">\n        <input type=\"range\" title=\"Height\" name=\"sliderHeight\" min=\"3\" max=\"8\" value=\"4\" step=\".5\" condition=\"!fullScreen\">\n        <header>Carousel</header>\n        <input type=\"checkbox\" title=\"Fade Effect\" name=\"fade\">\n        <input type=\"checkbox\" title=\"Autoplay\" name=\"autoplay\">\n        <input type=\"range\" title=\"Interval\" name=\"interval\" min=\"3\" max=\"10\" value=\"5\" step=\"1\" condition=\"autoplay\">\n        <input type=\"checkbox\" title=\"Controls\" name=\"showControl\">\n        <input type=\"checkbox\" title=\"Bullets\" name=\"showIndicators\">\n        <input type=\"color\" title=\"Color\" value=\"#fef2f2\" name=\"controlsColor\" condition=\"showControl || showIndicators\">\n        <header>Slide</header>\n        <input type=\"checkbox\" title=\"Caption\" name=\"showCaption\">\n        <input type=\"checkbox\" title=\"Text\" name=\"showText\">\n        <input type=\"checkbox\" title=\"Buttons\" name=\"showButtons\">\n        <header>Background</header>\n        <input type=\"color\" title=\"Color\" name=\"bgColor\" value=\"#ffffff\" selected>\n    </mbr-parameters>\n    \n  \n        <div class=\"row justify-content-center\">\n            <div class=\"col-12 col-md-12 col-lg-12\">\n                <div id=\"{{sliderId}}\" class=\"carousel slide\" mbr-class=\"{'carousel-fade': fade}\" data-ride=\"{{autoplay ? 'carousel' : false}}\" data-bs-ride=\"{{autoplay ? 'carousel' : false}}\" data-interval=\"{{interval*1000}}\" data-bs-interval=\"{{interval*1000}}\">\n                    <ol class=\"carousel-indicators\" mbr-if=\"showIndicators\">\n                        <li data-target=\"#{{sliderId}}\" data-bs-target=\"#{{sliderId}}\" data-slide-to=\"0\" data-bs-slide-to=\"0\" class=\"active\"></li>\n                        \n                        \n                    </ol>\n                    <div class=\"carousel-inner\">\n                        <div class=\"carousel-item slider-image item active\">\n                            <div class=\"item-wrapper\">\n                                <img class=\"d-block w-100\" src=\"@PROJECT_PATH@/assets/images/banner-momas-1920x1000.jpg\" data-slide-to=\"0\" data-bs-slide-to=\"0\">\n                                <div class=\"carousel-caption\" mbr-if=\"showCaption || showText || showButtons\">\n                                    <h5 class=\"mbr-section-title mbr-fonts-style\" mbr-if=\"showCaption\" mbr-theme-style=\"display-1\">START YOUR MORNING WITH COFFEE</h5>\n                                    <p class=\"mbr-section-text mb-0 mbr-fonts-style\" mbr-if=\"showText\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-section-text,.mbr-section-btn\">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste maiores, blanditiis eum.</p>\n                                    <div class=\"mbr-section-btn\" mbr-if=\"showButtons\" mbr-buttons mbr-theme-style=\"display-4\" data-toolbar=\"-mbrBtnMove\"><a class=\"btn btn-lg btn-white\" href=\"#\" data-app-placeholder=\"Type Text\">READ MORE</a> <a class=\"btn btn-lg btn-white-outline\" href=\"#\" data-app-placeholder=\"Type Text\">VIEW MORE</a></div>\n                                </div>\n                            </div>\n                        </div>\n\n                        \n                    </div>\n                    <a class=\"carousel-control carousel-control-prev\" mbr-if=\"showControl\" href=\"#{{sliderId}}\" role=\"button\" data-slide=\"prev\" data-bs-slide=\"prev\">\n                        <span class=\"mobi-mbri mobi-mbri-arrow-prev\" aria-hidden=\"true\"></span>\n                        <span class=\"sr-only visually-hidden\">Previous</span>\n                    </a>\n                    <a class=\"carousel-control carousel-control-next\" mbr-if=\"showControl\" href=\"#{{sliderId}}\" role=\"button\" data-slide=\"next\" data-bs-slide=\"next\">\n                        <span class=\"mobi-mbri mobi-mbri-arrow-next\" aria-hidden=\"true\"></span>\n                        <span class=\"sr-only visually-hidden\">Next</span>\n                    </a>\n                </div>\n            </div>\n        </div>\n \n</section>",
+          "_cid": "t0ce0KCrjz",
+          "_anchor": "slider3-4",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 1rem)",
+            "padding-bottom": "(@paddingBottom * 1rem)",
+            "& when (@bg-type = \"color\")": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = \"image\")": {
+              "background-image": "url(@bg-value)"
+            },
+            ".main_header": {
+              "margin": "25px 0 44px"
+            },
+            ".mbr-section-title": {
+              "color": "#e5673b",
+              "margin-bottom": "13px"
+            },
+            ".mbr-text": {
+              "color": "#ffffff",
+              "line-height": "1.2727em"
+            },
+            ".card_wrapper": {
+              "margin-bottom": "30px",
+              "@media (min-width: 992px)": {
+                "padding": "0 15px"
+              }
+            },
+            ".card_top": {
+              "display": "flex",
+              "align-items": "baseline",
+              "color": "#ffffff"
+            },
+            ".line": {
+              "border-bottom": "1px solid @lineColor",
+              "flex-grow": "1",
+              "margin": "0 15px"
+            },
+            ".card_title": {
+              "color": "#e5673b",
+              "line-height": "1.2727em"
+            },
+            ".card_price": {
+              "color": "#ffffff"
+            },
+            ".card_text": {
+              "color": "#ffffff"
+            }
+          },
+          "_name": "article4",
+          "_sourceTheme": "bistrom5",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"Article4\" group=\"Article\" mbr-class=\"{'mbr-parallax-background':bg.parallax}\">\n    \n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"4\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"1\">\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Text\" name=\"showText\" checked>\n        <header>Card</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"cardTitle\" checked>\n        <input type=\"checkbox\" title=\"Price\" name=\"cardPrice\" checked>\n        <input type=\"checkbox\" title=\"Text\" name=\"cardText\" checked>\n        <input type=\"range\" inline title=\"Count\" name=\"listCount\" min=\"2\" max=\"30\" step=\"1\" value=\"8\">\n        <input type=\"color\" title=\"Line\" value=\"#e5673b\" name=\"lineColor\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"@PROJECT_PATH@/assets/images/mbr-1-1920x1279.jpg\" selected parallax>\n            <input type=\"color\" title=\"Color\" value=\"#a7a27e\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#1d2e68\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.6\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    \n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"row\">\n            <div class=\"col-12 col lg-10\" mbr-if=\"showTitle || showText\">\n                <div class=\"main_header text-center\">\n                    <h3 class=\"mbr-section-title mbr-fonts-style\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\" mbr-theme-style=\"display-2\"><b>M E N Ú</b></h3>\n                    <p class=\"mbr-text mb-0 mbr-fonts-style\" mbr-if=\"showText\" data-app-selector=\".mbr-text\" mbr-theme-style=\"display-7\"><b>¡CEVICHE LISTO PARA LLEVAR!</b><br>* Todos los Ceviches vienen únicamente en presentación de 16 oz. (1 libra), acompañado de Salsa de Chiltepe de la Casa y Galletas Saladas o Plataninas.<br></p>\n                </div>\n            </div>\n        </div>\n        <div class=\"row\" mbr-list-grow=\"listCount\" mbr-list mbr-if=\"cardTitle || cardPrice || cardText\">\n            <div class=\"col-12 col-md-12 col-lg-6\">\n                <div class=\"card_wrapper\">\n                    <div class=\"card_top\">\n                        <h4 class=\"card_title mb-0 mbr-fonts-style\" mbr-if=\"cardTitle\" data-app-selector=\".card_title\" mbr-theme-style=\"display-5\"><b>CEVICHE</b><br><b>de Camarón&nbsp;</b><b>Tradicional</b></h4>\n                        <div class=\"line\"></div>\n                        <p class=\"card_price mb-0 mbr-fonts-style\" mbr-if=\"cardPrice\" data-app-selector=\".card_price\" mbr-theme-style=\"display-5\"><b>Q125</b></p>\n                    </div>\n                    <p class=\"card_text mb-0 mbr-fonts-style\" mbr-if=\"cardText\" data-app-selector=\".card_text\" mbr-theme-style=\"display-7\">Camarón mediano precocido y curtido con sal y limón con tomate, cebolla morada y culantro finamente picados.</p>\n                </div>\n            </div>\n            <div class=\"col-12 col-md-12 col-lg-6\">\n                <div class=\"card_wrapper\">\n                    <div class=\"card_top\">\n                        <h4 class=\"card_title mb-0 mbr-fonts-style\" mbr-if=\"cardTitle\" data-app-selector=\".card_title\" mbr-theme-style=\"display-5\"><b>COCTEL</b><div><b>de Camarón</b></div></h4>\n                        <div class=\"line\"></div>\n                        <p class=\"card_price mb-0 mbr-fonts-style\" mbr-if=\"cardPrice\" data-app-selector=\".card_price\" mbr-theme-style=\"display-5\"><b>Q135</b></p>\n                    </div>\n                    <p class=\"card_text mb-0 mbr-fonts-style\" mbr-if=\"cardText\" data-app-selector=\".card_text\" mbr-theme-style=\"display-7\">Camarón mediano precocido y curtido con sal y limón, en una salsa condimentada de la casa.</p>\n                </div>\n            </div>\n        <div class=\"col-12 col-md-12 col-lg-6\">\n                <div class=\"card_wrapper\">\n                    <div class=\"card_top\">\n                        <h4 class=\"card_title mb-0 mbr-fonts-style\" mbr-if=\"cardTitle\" data-app-selector=\".card_title\" mbr-theme-style=\"display-5\"><b>CEVICHE</b><div><b>de Pescado Tipo Peruano</b></div></h4>\n                        <div class=\"line\"></div>\n                        <p class=\"card_price mb-0 mbr-fonts-style\" mbr-if=\"cardPrice\" data-app-selector=\".card_price\" mbr-theme-style=\"display-5\"><b>Q125</b></p>\n                    </div>\n                    <p class=\"card_text mb-0 mbr-fonts-style\" mbr-if=\"cardText\" data-app-selector=\".card_text\" mbr-theme-style=\"display-7\">Pescado de primera, cortado en trozos, curtido con sal y limón con finas julianas de cebolla morada y sazonado con Ingredientes Especiales.</p>\n                </div>\n            </div><div class=\"col-12 col-md-12 col-lg-6\">\n                <div class=\"card_wrapper\">\n                    <div class=\"card_top\">\n                        <h4 class=\"card_title mb-0 mbr-fonts-style\" mbr-if=\"cardTitle\" data-app-selector=\".card_title\" mbr-theme-style=\"display-5\"><b>CEVICHE</b><div><b>de Pescado Tradicional</b></div></h4>\n                        <div class=\"line\"></div>\n                        <p class=\"card_price mb-0 mbr-fonts-style\" mbr-if=\"cardPrice\" data-app-selector=\".card_price\" mbr-theme-style=\"display-5\">Q125<br></p>\n                    </div>\n                    <p class=\"card_text mb-0 mbr-fonts-style\" mbr-if=\"cardText\" data-app-selector=\".card_text\" mbr-theme-style=\"display-7\">Pescado de primera, cortado en trozos, curtido con sal y limón con tomate, cebolla morada y culantro finamente picados.</p>\n                </div>\n            </div><div class=\"col-12 col-md-12 col-lg-6\">\n                <div class=\"card_wrapper\">\n                    <div class=\"card_top\">\n                        <h4 class=\"card_title mb-0 mbr-fonts-style\" mbr-if=\"cardTitle\" data-app-selector=\".card_title\" mbr-theme-style=\"display-5\"><b>CEVICHE</b><div><b style=\"font-size: calc(1.035rem + 0.065 * ((100vw - 20rem) / 28));\">Mixto de Camarón y Pescado</b></div></h4>\n                        <div class=\"line\"></div>\n                        <p class=\"card_price mb-0 mbr-fonts-style\" mbr-if=\"cardPrice\" data-app-selector=\".card_price\" mbr-theme-style=\"display-5\"><b>Q125</b><br></p>\n                    </div>\n                    <p class=\"card_text mb-0 mbr-fonts-style\" mbr-if=\"cardText\" data-app-selector=\".card_text\" mbr-theme-style=\"display-7\">Una mezcla de nuestros Ceviches de Camarón Tradicional y Pescado Tradicional.</p>\n                </div>\n            </div><div class=\"col-12 col-md-12 col-lg-6\">\n                <div class=\"card_wrapper\">\n                    <div class=\"card_top\">\n                        <h4 class=\"card_title mb-0 mbr-fonts-style\" mbr-if=\"cardTitle\" data-app-selector=\".card_title\" mbr-theme-style=\"display-5\"><b>CEVICHE</b><div><b>de Concha</b></div></h4>\n                        <div class=\"line\"></div>\n                        <p class=\"card_price mb-0 mbr-fonts-style\" mbr-if=\"cardPrice\" data-app-selector=\".card_price\" mbr-theme-style=\"display-5\"><b>Q135</b></p>\n                    </div>\n                    <p class=\"card_text mb-0 mbr-fonts-style\" mbr-if=\"cardText\" data-app-selector=\".card_text\" mbr-theme-style=\"display-7\">Concha Negra curtida con sal y limón, con tomate, cebolla morada y hierbabuena finamente picados.</p>\n                </div>\n            </div><div class=\"col-12 col-md-12 col-lg-6\">\n                <div class=\"card_wrapper\">\n                    <div class=\"card_top\">\n                        <h4 class=\"card_title mb-0 mbr-fonts-style\" mbr-if=\"cardTitle\" data-app-selector=\".card_title\" mbr-theme-style=\"display-5\"><b>CEVICHE</b><br><b>Mixto de Concha y Camarón</b></h4>\n                        <div class=\"line\"></div>\n                        <p class=\"card_price mb-0 mbr-fonts-style\" mbr-if=\"cardPrice\" data-app-selector=\".card_price\" mbr-theme-style=\"display-5\"><b>Q135</b></p>\n                    </div>\n                    <p class=\"card_text mb-0 mbr-fonts-style\" mbr-if=\"cardText\" data-app-selector=\".card_text\" mbr-theme-style=\"display-7\">Una mezcla de nuestro Ceviche de Concha y Camarón Tradicional.</p>\n                </div>\n            </div><div class=\"col-12 col-md-12 col-lg-6\">\n                <div class=\"card_wrapper\">\n                    <div class=\"card_top\">\n                        <h4 class=\"card_title mb-0 mbr-fonts-style\" mbr-if=\"cardTitle\" data-app-selector=\".card_title\" mbr-theme-style=\"display-5\"><b>CEVICHE</b><br><b>Mixto de Camarón y Pulpo</b></h4>\n                        <div class=\"line\"></div>\n                        <p class=\"card_price mb-0 mbr-fonts-style\" mbr-if=\"cardPrice\" data-app-selector=\".card_price\" mbr-theme-style=\"display-5\"><b>Q135</b></p>\n                    </div>\n                    <p class=\"card_text mb-0 mbr-fonts-style\" mbr-if=\"cardText\" data-app-selector=\".card_text\" mbr-theme-style=\"display-7\">Una mezcla de nuestro Ceviche de Camarón Tradicional con Trozos de Pulpo en su punto, sazonado con Ingredientes Especiales.<br></p>\n                </div>\n            </div></div>\n    </div>\n</section>",
+          "_cid": "t0cbC56m7s",
+          "_anchor": "article4-0",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 1rem)",
+            "padding-bottom": "(@paddingBottom * 1rem)",
+            "position": "relative",
+            "background-color": "@contentColor",
+            "@media (min-width: 768px)": {
+              ".g-0": {
+                "margin-right": "0 !important",
+                "margin-left": "0 !important",
+                "& > [class*=\"col\"]": {
+                  "padding-left": "0 !important",
+                  "padding-right": "0 !important"
+                }
+              }
+            },
+            ".card_wrapper": {
+              "padding": "2rem 20%",
+              "text-align": "center",
+              "display": "flex",
+              "align-items": "center",
+              "justify-content": "center",
+              "height": "100%",
+              "position": "relative",
+              "@media (max-width: 991px)": {
+                "padding": "65px 30px",
+                ".shape": {
+                  "width": "auto",
+                  "padding": "0 1rem"
+                }
+              }
+            },
+            ".content_box": {
+              "position": "relative",
+              "z-index": "2"
+            },
+            ".shape": {
+              "position": "absolute",
+              "z-index": "1",
+              "top": "50%",
+              "left": "50%",
+              "width": "100%",
+              "transform": "translate(-50%, -50%)",
+              "opacity": "(@imgOpacity * 1)",
+              "padding": "0 100px",
+              "img": {
+                "width": "100%",
+                "height": "100%",
+                "object-fit": "contain"
+              }
+            },
+            ".mbr-section-title": {
+              "color": "#e04600",
+              "margin-bottom": "20px"
+            },
+            ".mbr-section-btn": {
+              "margin-top": "43px"
+            },
+            ".image-wrapper, img": {
+              "width": "100%",
+              "height": "100%",
+              "object-fit": "cover"
+            },
+            ".mbr-text, .mbr-section-btn": {
+              "text-align": "left",
+              "color": "#1d2e68"
+            }
+          },
+          "_name": "features12",
+          "_sourceTheme": "bistrom5",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"features12\" group=\"Features\" mbr-class=\"{'mbr-parallax-background':bg.parallax}\">\n    \n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Reverse\" name=\"reverse\" checked>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"0\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"0\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Text\" name=\"showText\" checked>\n        <input type=\"checkbox\" title=\"Buttons\" name=\"showButtons\">\n        <input type=\"checkbox\" title=\"Shape\" name=\"showShape\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"imgOpacity\" min=\".1\" max=\"1\" step=\".1\" value=\"0.5\" condition=\"showShape\">\n        <header>Background</header>\n        <input type=\"color\" title=\"Background\" value=\"#e5ddd5\" name=\"contentColor\">\n        <!-- End block parameters -->\n    </mbr-parameters>\n    \n\n        <div class=\"row g-0\" mbr-class=\"{'flex-row-reverse' : reverse}\">\n            <div class=\"col-12 col-md-12 col-lg-6\">\n                <div class=\"image-wrapper\">\n                    <img src=\"@PROJECT_PATH@/assets/images/coctel-de-camaron-momas-1-1080x1080.jpg\" alt=\"Mobirise\">\n                </div>\n            </div>\n            <div class=\"col-12 col-md-12 col-lg-6\">\n                <div class=\"card_wrapper\">\n                    <div class=\"content_box\">\n                        <h4 class=\"mbr-section-title mbr-fonts-style\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\" mbr-theme-style=\"display-2\"><b>E X T R A S</b></h4>\n                        <p class=\"mbr-text mb-0 mbr-fonts-style\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\" mbr-theme-style=\"display-5\"><br>AGUACATE HASS (Entero)<br><b>Q.10.00</b><br><br>GALLETAS (Incluye 2 paquetitos)<br><b>Q.5.00</b><br><br>PLATANINAS (Incluye 1 bolsita)<br><b>Q.5.00</b></p>\n                        <div mbr-buttons mbr-theme-style=\"display-4\" data-toolbar=\"-mbrBtnMove\" class=\"mbr-section-btn\" mbr-if=\"showButtons\"><a class=\"btn btn-lg btn-white\" href=\"#\" data-app-placeholder=\"Type Text\">VIEW MORE</a></div>\n                    </div>\n                    <div class=\"shape\" mbr-if=\"showShape\">\n                        <img src=\"../_images/signature_pink.png\" alt>\n                    </div>\n                </div>\n            </div>\n        </div>\n        \n</section>",
+          "_cid": "t1CGCGcMLA",
+          "_anchor": "features12-p",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
           "_params": {}
         },
         {
